@@ -24,6 +24,7 @@ To make Homebridge aware of the new plugin, you will have to add it to your conf
 
 Accessory should **always** be FakeSwitch.
 You can change the name whatever you want.
+**YOU NEED TO MAKE A .TXT FILE CALLED thenameyouentered_conf.txt IN YOUR USER'S .homebridge/ FOLDER!!!!!!!!!!!**
 *NOTE: The "state file" will be stored in the .homebridge/ folder. The filename is "name_conf.txt".*
 
 ###### What it does?
@@ -108,12 +109,6 @@ Set is for setting the state of the device.
     this._service.getCharacteristic(Characteristic.On)
         .on('get', this._get.bind(this))
         .on('set', this._set.bind(this));
-```
-
-Error checking:<br>
-If the file we defined not exists, then create it.
-```
-    fs.readFile(this.filePath, function(err, data){ if (err) fs.writeFile(FakeSwitch.filePath, "0", "utf8", function(err){if (err) throw err;});});
 ```
 
 Close this function:
