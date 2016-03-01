@@ -1,6 +1,6 @@
 {
   "name": "homebridge-fakeswitchfs",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simulated switch plugin for Homebridge: https://github.com/nfarina/homebridge",
   "main": "index.js",
   "scripts": {
