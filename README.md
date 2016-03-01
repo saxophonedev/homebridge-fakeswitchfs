@@ -16,8 +16,8 @@ To make Homebridge aware of the new plugin, you will have to add it to your conf
 ```
 "accessories": [
     {
-      "accessory": "",
-      "name": "Living Room TV",
+      "accessory": "FakeSwitch",
+      "name": "Test Switch",
     } 
 ]
 ```
