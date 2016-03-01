@@ -24,7 +24,7 @@ To make Homebridge aware of the new plugin, you will have to add it to your conf
 
 Accessory should **always** be FakeSwitch.
 You can change the name whatever you want.
-**YOU NEED TO MAKE A .TXT FILE CALLED thenameyouentered_conf.txt IN YOUR USER'S .homebridge/ FOLDER!!!!!!!!!!!**
+**YOU NEED TO MAKE A .TXT FILE CALLED thenameyouentered_conf.txt WITH THE NUMBER 0 IN IT IN YOUR USER'S .homebridge/ FOLDER!!!!!!!!!!!**
 *NOTE: The "state file" will be stored in the .homebridge/ folder. The filename is "name_conf.txt".*
 
 ###### What it does?
