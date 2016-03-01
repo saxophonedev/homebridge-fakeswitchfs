@@ -113,7 +113,7 @@ Set is for setting the state of the device.
 Error checking:<br>
 If the file we defined not exists, then create it.
 ```
-    fs.readFile(this.filePath, function(err, data){ if (err) fs.writeFile(this.filePath, "0", "utf8", function(err){if (err) throw err;});});
+    fs.readFile(this.filePath, function(err, data){ if (err) fs.writeFile(FakeSwitch.filePath, "0", "utf8", function(err){if (err) throw err;});});
 ```
 
 Close this function:
