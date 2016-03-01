@@ -110,6 +110,12 @@ Set is for setting the state of the device.
         .on('set', this._set.bind(this));
 ```
 
+Error checking:<br>
+If the file we defined not exists, then create it.
+```
+    fs.readFile(this.filePath, function(err, data){ if (err) fs.writeFile(this.filePath, "0", "utf8", function(err){if (err) throw err;});});
+```
+
 Close this function:
 ```
 }
@@ -142,7 +148,7 @@ Content: state(this is a variable we get from Homebridge when it calls this func
 Encoding: UTF-8(I don't know why)<br>
 Callback: Our function which throws an error if it exists, or executes the callback function
 ```
-    fs.writeFile(this.filePath, state + '', "utf8", (err) => { if (err) throw err; callback(null); });
+    fs.writeFile(this.filePath, state + '', "utf8", function(err){ if (err) throw err; callback(null); });
 ```
 
 Close this function:
@@ -160,7 +166,7 @@ We are going to read a file:<br>
 Path: this.filePath(we defined this earlier)<br>
 Callback: Our function which throws an error if it exists, or executes the callback function 
 ```
-    fs.readFile(this.filePath, (err, data) => { if (err) throw err; callback(null, parseInt(data) ); });
+    fs.readFile(this.filePath, function(err, data){ if (err) throw err; callback(null, parseInt(data) ); });
 ```
 
 Close this function:
