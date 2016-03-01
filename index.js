@@ -21,6 +21,7 @@ function FakeSwitch(log, config) {
   this._service.getCharacteristic(Characteristic.On)    
     .on('get', this._get.bind(this))
     .on('set', this._set.bind(this));
+  fs.readFile(this.filePath, function(err, data){ if (err) fs.writeFile(this.filePath, "0", "utf8", function(err){if (err) throw err;});});
 }
 
 FakeSwitch.prototype.getServices = function() {
