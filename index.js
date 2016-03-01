@@ -28,9 +28,9 @@ FakeSwitch.prototype.getServices = function() {
 }
 
 FakeSwitch.prototype._set = function (state, callback){
-    fs.writeFile(this.filePath, state + '', "utf8", (err) => { if (err) throw err; callback(null); });
+    fs.writeFile(this.filePath, state + '', "utf8", function(err){ if (err) throw err; callback(null); });
 }
 
 FakeSwitch.prototype._get = function(callback){
-    fs.readFile(this.filePath, (err, data) => { if (err) throw err; callback(null, parseInt(data) ); });
+    fs.readFile(this.filePath, function(err, data){ if (err) throw err; callback(null, parseInt(data) ); });
 }
