@@ -6,7 +6,7 @@
 
 To install the plugin, head over to the machine with Homebridge set up and run
 ```
-sudo npm install -g homebridge-sonytvpower
+sudo npm install -g homebridge-fakeswitchfs
 ```
 
 ###### Configuration
