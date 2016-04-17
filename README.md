@@ -17,7 +17,7 @@ To make Homebridge aware of the new plugin, you will have to add it to your conf
 "accessories": [
     {
       "accessory": "FakeSwitch",
-      "name": "Test Switch",
+      "name": "Test Switch"
     } 
 ]
 ```
